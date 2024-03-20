@@ -117,8 +117,9 @@ function App() {
             placeholder="https://shorturl.com/HIL45"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className="border-4 rounded-md text-black text-xl px-2 py-1 mt-10 w-2/3 focus:outline-none focus:border-blue-500"
+            className="border-4 rounded-md text-black text-xl px-2 py-1 mt-10 w-2/3 disabled:bg-white focus:outline-none focus:border-blue-500"
             required
+            disabled={fullUrl}
           />
           {isLoading ? (
             <button
