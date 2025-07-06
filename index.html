@@ -1,697 +1,805 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <!-- Primary Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
-    />
-    <meta
-      name="keywords"
-      content="URL expander, short URL expander, check short links, URL safety checker, free URL expander, secure URL preview, suspicious link checker, online privacy tool, website safety checker, expand tinyurl, expand bit.ly, expand ow.ly, URL destination checker"
-    />
-    <meta name="author" content="Sourav Dutta" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0ea5e9" />
+    <head>
+        <!-- Primary Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
+        />
+        <meta
+            name="keywords"
+            content="URL expander, short URL expander, check short links, URL safety checker, free URL expander, secure URL preview, suspicious link checker, online privacy tool, website safety checker, expand tinyurl, expand bit.ly, expand ow.ly, URL destination checker"
+        />
+        <meta name="author" content="Sourav Dutta" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#0ea5e9" />
 
-    <!-- Open Graph / Social Meta Tags -->
-    <meta
-      property="og:title"
-      content="Expand a Short URL | Free Secure URL Expander Tool"
-    />
-    <meta
-      property="og:description"
-      content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://url.dsourav.com" />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dzjujoqyi/image/upload/v1744373417/urlexpander-meta-image.webp"
-    />
-    <meta property="og:site_name" content="ExpandShortURL" />
+        <!-- Open Graph / Social Meta Tags -->
+        <meta
+            property="og:title"
+            content="Expand a Short URL | Free Secure URL Expander Tool"
+        />
+        <meta
+            property="og:description"
+            content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://url.dsourav.com" />
+        <meta
+            property="og:image"
+            content="https://res.cloudinary.com/dzjujoqyi/image/upload/v1744373417/urlexpander-meta-image.webp"
+        />
+        <meta property="og:site_name" content="ExpandShortURL" />
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Expand a Short URL | Free Secure URL Expander Tool"
-    />
-    <meta
-      name="twitter:description"
-      content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
-    />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/dzjujoqyi/image/upload/v1744373417/urlexpander-meta-image.webp"
-    />
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Expand a Short URL | Free Secure URL Expander Tool"
+        />
+        <meta
+            name="twitter:description"
+            content="URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy."
+        />
+        <meta
+            name="twitter:image"
+            content="https://res.cloudinary.com/dzjujoqyi/image/upload/v1744373417/urlexpander-meta-image.webp"
+        />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://url.dsourav.com" />
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://url.dsourav.com" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Preload Fonts -->
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    /></noscript>
+        <!-- Preload Fonts -->
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript
+            ><link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        /></noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: "#f0f9ff",
-                100: "#e0f2fe",
-                200: "#bae6fd",
-                300: "#7dd3fc",
-                400: "#38bdf8",
-                500: "#0ea5e9",
-                600: "#0284c7",
-                700: "#0369a1",
-                800: "#075985",
-                900: "#0c4a6e",
-              },
-            },
-          },
-        },
-      };
-    </script>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                50: "#f0f9ff",
+                                100: "#e0f2fe",
+                                200: "#bae6fd",
+                                300: "#7dd3fc",
+                                400: "#38bdf8",
+                                500: "#0ea5e9",
+                                600: "#0284c7",
+                                700: "#0369a1",
+                                800: "#075985",
+                                900: "#0c4a6e",
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Expand a Short URL",
-        "url": "https://url.dsourav.com",
-        "description": "URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy.",
-        "applicationCategory": "Utility",
-        "operatingSystem": "Web",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "ExpandShortURL"
-        }
-      }
-    </script>
-    <title>Expand a Short URL | Free Secure URL Expander Tool</title>
-  </head>
-  <body
-    class="bg-gradient-to-br from-primary-50 to-primary-100 min-h-screen font-sans antialiased"
-  >
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm">
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <a href="/" class="flex items-center">
-            <i class="fas mr-2"><img class="size-9" src="favicon.svg" alt="logo"></i>
-            <span class="text-xl font-bold text-primary-800"
-              >ExpandShortURL</span
-            >
-          </a>
-          <nav class="hidden md:flex space-x-6">
-            <a
-              href="#how-it-works"
-              class="text-primary-700 hover:text-primary-900 transition"
-              >How It Works</a
-            >
-            <a
-              href="#faq"
-              class="text-primary-700 hover:text-primary-900 transition"
-              >FAQ</a
-            >
-            <a
-              href="#privacy"
-              class="text-primary-700 hover:text-primary-900 transition"
-              >Privacy</a
-            >
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="py-16 md:py-24">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
-          Expand a Short URL
-        </h1>
-        <p class="text-xl text-primary-600 max-w-2xl mx-auto mb-8">
-          Free, secure, and ad-free tool to reveal the original destination of
-          any short URL. Protect yourself from suspicious links.
-        </p>
-
-        <div
-          class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
-        >
-          <div class="p-2 md:p-8">
-            <div class="mb-6">
-              <label
-                for="short-url"
-                class="block text-sm font-medium text-primary-700 mb-2"
-                >Paste your short URL here</label
-              >
-              <div class="flex">
-                <input
-                  type="url"
-                  id="short-url"
-                  placeholder="https://sori.in/example"
-                  class="flex-grow px-4 py-3 border border-primary-300 rounded-l-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
-                />
-                <button
-                  id="expand-btn"
-                  class="bg-primary-600 flex items-center hover:bg-primary-700 text-white px-6 py-3 rounded-r-lg font-medium transition duration-200"
-                >
-                  <i class="fas fa-expand hidden md:block mr-2"></i> Expand
-                </button>
-              </div>
-            </div>
-
-            <div
-              id="result-container"
-              class="hidden bg-primary-50 border border-primary-200 rounded-lg p-4"
-            >
-              <div class="flex justify-between items-center mb-3">
-                <h2 class="font-medium text-primary-800">Original URL:</h2>
-                <button
-                  id="copy-btn"
-                  class="text-primary-600 hover:text-primary-800"
-                >
-                  <i class="fas fa-copy"></i> Copy
-                </button>
-              </div>
-              <div
-                id="original-url"
-                class="break-all bg-white p-3 rounded border border-primary-200 text-primary-700"
-              ></div>
-              <div
-                id="safety-info"
-                class="mt-3 flex items-center text-sm"
-              ></div>
-            </div>
-
-            <div id="loading" class="hidden text-center py-8">
-              <div
-                class="inline-block animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary-600 mb-4"
-              ></div>
-              <p class="text-primary-700">Expanding your URL...</p>
-            </div>
-
-            <div
-              id="error"
-              class="hidden bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary-800 mb-12">
-          Why Use Our URL Expander?
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
-            <div class="text-primary-600 text-3xl mb-4">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary-800 mb-2">
-              100% Secure
-            </h3>
-            <p class="text-primary-700">
-              We don't store your URLs or track your activity. Your privacy is
-              our priority.
-            </p>
-          </div>
-          <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
-            <div class="text-primary-600 text-3xl mb-4">
-              <i class="fas fa-ad"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary-800 mb-2">No Ads</h3>
-            <p class="text-primary-700">
-              Completely ad-free experience with no annoying popups or trackers.
-            </p>
-          </div>
-          <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
-            <div class="text-primary-600 text-3xl mb-4">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary-800 mb-2">
-              Instant Results
-            </h3>
-            <p class="text-primary-700">
-              Get the original URL in seconds without any delays.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-16 bg-primary-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary-800 mb-12">
-          How It Works
-        </h2>
-        <div class="max-w-4xl mx-auto">
-          <div class="flex flex-col md:flex-row gap-8 mb-8">
-            <div
-              class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
-            >
-              1
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-primary-800 mb-2">
-                Paste Your Short URL
-              </h3>
-              <p class="text-primary-700">
-                Copy any shortened URL (bit.ly, t.co, goo.gl, etc.) and paste it
-                into our tool.
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-col md:flex-row gap-8 mb-8">
-            <div
-              class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
-            >
-              2
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-primary-800 mb-2">
-                Click "Expand"
-              </h3>
-              <p class="text-primary-700">
-                Our system will safely resolve the URL without visiting the
-                destination.
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-col md:flex-row gap-8">
-            <div
-              class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
-            >
-              3
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-primary-800 mb-2">
-                See the Original URL
-              </h3>
-              <p class="text-primary-700">
-                View the full destination URL and check if it's safe before
-                visiting.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Supported Services Section -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary-800 mb-12">
-          Supported URL Shorteners
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <a href="https://www.sorti.in" target="_blank" rel="noopener">
-              <i class="fas text-3xl text-primary-600"
-                ><img src="https://www.sorti.in/favicon.ico" alt="sorti logo"
-              /></i>
-              <p class="font-medium text-primary-800">sorti.in</p>
-            </a>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fab text-3xl text-primary-600 mb-2"
-              ><img src="https://bitly.com/favicon.ico" alt="bitly logo"
-            /></i>
-            <p class="font-medium text-primary-800">bit.ly</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fas fa-link text-3xl text-primary-600 mb-2"></i>
-            <p class="font-medium text-primary-800">goo.gl</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fas fa-compress text-3xl text-primary-600 mb-2"></i>
-            <p class="font-medium text-primary-800">ow.ly</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i
-              class="fas fa-external-link-alt text-3xl text-primary-600 mb-2"
-            ></i>
-            <p class="font-medium text-primary-800">tinyurl.com</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fas fa-cut text-3xl text-primary-600 mb-2"></i>
-            <p class="font-medium text-primary-800">cutt.ly</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fas fa-share text-3xl text-primary-600 mb-2"></i>
-            <p class="font-medium text-primary-800">rebrand.ly</p>
-          </div>
-          <div class="bg-primary-50 p-4 rounded-lg text-center">
-            <i class="fas fa-ellipsis-h text-3xl text-primary-600 mb-2"></i>
-            <p class="font-medium text-primary-800">And more...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16 bg-primary-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary-800 mb-12">
-          Frequently Asked Questions
-        </h2>
-        <div class="max-w-3xl mx-auto space-y-4">
-          <details class="bg-white rounded-lg shadow-sm overflow-hidden" open>
-            <summary
-              class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
-            >
-              <span>What is a URL expander?</span>
-              <i
-                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
-              ></i>
-            </summary>
-            <div class="px-6 pb-6 text-primary-700">
-              <p>
-                A URL expander is a tool that reveals the original, full-length
-                URL behind shortened links (like bit.ly, t.co, goo.gl, etc.).
-                This helps you see where a link actually goes before you click
-                on it, protecting you from potentially dangerous websites.
-              </p>
-            </div>
-          </details>
-          <details class="bg-white rounded-lg shadow-sm overflow-hidden">
-            <summary
-              class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
-            >
-              <span>Is this service really free?</span>
-              <i
-                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
-              ></i>
-            </summary>
-            <div class="px-6 pb-6 text-primary-700">
-              <p>
-                Yes! Our URL expander is completely free to use with no hidden
-                costs. We don't show ads or sell your data, making it one of the
-                most privacy-focused URL expansion tools available.
-              </p>
-            </div>
-          </details>
-          <details class="bg-white rounded-lg shadow-sm overflow-hidden">
-            <summary
-              class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
-            >
-              <span>How does this protect me from suspicious links?</span>
-              <i
-                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
-              ></i>
-            </summary>
-            <div class="px-6 pb-6 text-primary-700">
-              <p>
-                By expanding short URLs, you can see the actual destination
-                before visiting. This helps avoid phishing sites, malware, or
-                other dangerous web pages hidden behind shortened links. Many
-                cybercriminals use URL shorteners to disguise malicious
-                websites.
-              </p>
-            </div>
-          </details>
-          <details class="bg-white rounded-lg shadow-sm overflow-hidden">
-            <summary
-              class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
-            >
-              <span>Do you store the URLs I expand?</span>
-              <i
-                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
-              ></i>
-            </summary>
-            <div class="px-6 pb-6 text-primary-700">
-              <p>
-                No. We don't store or log any of the URLs you expand. Your
-                privacy is important to us, which is why we designed this tool
-                to process URLs without keeping any records.
-              </p>
-            </div>
-          </details>
-          <details class="bg-white rounded-lg shadow-sm overflow-hidden">
-            <summary
-              class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
-            >
-              <span>Which URL shorteners do you support?</span>
-              <i
-                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
-              ></i>
-            </summary>
-            <div class="px-6 pb-6 text-primary-700">
-              <p>
-                We support all major URL shortening services including bit.ly,
-                t.co (Twitter), goo.gl (Google), ow.ly, tinyurl.com, cutt.ly,
-                rebrand.ly, and many others. If you find a shortener we don't
-                support, please let us know!
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Privacy Section -->
-    <section id="privacy" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl font-bold text-center text-primary-800 mb-12">
-            Our Privacy Commitment
-          </h2>
-          <div class="bg-primary-50 rounded-lg p-8 shadow-sm">
-            <h3 class="text-xl font-semibold text-primary-800 mb-4">
-              We respect your privacy
-            </h3>
-            <p class="text-primary-700 mb-4">
-              Unlike many other online tools, we don't track your activity or
-              store the URLs you expand. Here's our privacy promise:
-            </p>
-            <ul class="space-y-3 text-primary-700">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> No
-                user accounts required
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> No
-                cookies or tracking
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> No
-                logging of expanded URLs
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> No
-                ads or third-party scripts
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> No
-                data sharing with third parties
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-primary-900 text-primary-100 py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold mb-4">ExpandShortURL</h3>
-            <p class="text-primary-300">
-              Free, secure, and privacy-focused URL expander tool to check
-              suspicious short links.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#how-it-works"
-                  class="text-primary-300 hover:text-white transition"
-                  >How It Works</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  class="text-primary-300 hover:text-white transition"
-                  >FAQ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#privacy"
-                  class="text-primary-300 hover:text-white transition"
-                  >Privacy</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Connect</h3>
-            <div class="flex space-x-4">
-              <a
-                href="https://x.com/souravdotdev"
-                class="text-primary-300 hover:text-white transition text-xl"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/dsouravcom/"
-                class="text-primary-300 hover:text-white transition text-xl"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="mailto:sourav@dsourav.com"
-                class="text-primary-300 hover:text-white transition text-xl"
-                ><i class="fas fa-envelope"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-t border-primary-800 mt-12 pt-8 text-center text-primary-400 text-sm"
-        >
-          <p>
-            © <span id="currentyear"></span> dsourav.com All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Script -->
-    <script>
-      // Set current year in footer
-      document.getElementById("currentyear").textContent =
-        new Date().getFullYear();
-      // Smooth Scroll for Anchor Links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-      // URL Expander Functionality
-      document
-        .getElementById("expand-btn")
-        .addEventListener("click", function () {
-          const shortUrl = document.getElementById("short-url").value.trim();
-          const resultContainer = document.getElementById("result-container");
-          const loading = document.getElementById("loading");
-          const error = document.getElementById("error");
-
-          // Reset UI
-          resultContainer.classList.add("hidden");
-          error.classList.add("hidden");
-
-          if (!shortUrl) {
-            error.textContent = "Please enter a short URL to expand";
-            error.classList.remove("hidden");
-            return;
-          }
-
-          loading.classList.remove("hidden");
-
-          //   Fetch the expanded URL
-          fetch(
-            `https://backend.sourav.top/expand-url?url=${encodeURIComponent(
-              shortUrl
-            )}`,
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
             {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Expand a Short URL",
+                "url": "https://url.dsourav.com",
+                "description": "URL expander tool: Free, secure & ad-free service to reveal original destinations of shortened links. Check any suspicious URL before clicking to protect your privacy.",
+                "applicationCategory": "Utility",
+                "operatingSystem": "Web",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "creator": {
+                    "@type": "Organization",
+                    "name": "ExpandShortURL"
+                }
             }
-          )
-            .then((response) => response.json())
-            .then((response) => {
-              loading.classList.add("hidden");
-              resultContainer.classList.remove("hidden");
+        </script>
+        <title>Expand a Short URL | Free Secure URL Expander Tool</title>
+    </head>
+    <body
+        class="bg-gradient-to-br from-primary-50 to-primary-100 min-h-screen font-sans antialiased"
+    >
+        <!-- Header Section -->
+        <header class="bg-white shadow-sm">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="/" class="flex items-center">
+                        <i class="fas mr-2"
+                            ><img class="size-9" src="favicon.svg" alt="logo"
+                        /></i>
+                        <span class="text-xl font-bold text-primary-800"
+                            >ExpandShortURL</span
+                        >
+                    </a>
+                    <nav class="hidden md:flex space-x-6">
+                        <a
+                            href="#how-it-works"
+                            class="text-primary-700 hover:text-primary-900 transition"
+                            >How It Works</a
+                        >
+                        <a
+                            href="#faq"
+                            class="text-primary-700 hover:text-primary-900 transition"
+                            >FAQ</a
+                        >
+                        <a
+                            href="#privacy"
+                            class="text-primary-700 hover:text-primary-900 transition"
+                            >Privacy</a
+                        >
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-              const originalUrl = response.url || "URL not found";
-              document.getElementById("original-url").textContent = originalUrl;
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h1
+                    class="text-4xl md:text-5xl font-bold text-primary-800 mb-6"
+                >
+                    Expand a Short URL
+                </h1>
+                <p class="text-xl text-primary-600 max-w-2xl mx-auto mb-8">
+                    Free, secure, and ad-free tool to reveal the original
+                    destination of any short URL. Protect yourself from
+                    suspicious links.
+                </p>
 
-              // Safety Info
-              const safetyInfo = document.getElementById("safety-info");
-              // check if the url start with http or https
-              if (!originalUrl.startsWith("http")) {
-                safetyInfo.innerHTML = `<i class="fas fa-exclamation-triangle text-red-500 mr-2"></i> Unsafe to visit`;
-              } else {
-                safetyInfo.innerHTML = `<i class="fas fa-shield-alt text-green-500 mr-2"></i> Safe to visit`;
-              }
-            })
-            .catch((err) => {
-              loading.classList.add("hidden");
-              error.textContent = err.message;
-              error.classList.remove("hidden");
+                <div
+                    class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+                >
+                    <div class="p-2 md:p-8">
+                        <div class="mb-6">
+                            <label
+                                for="short-url"
+                                class="block text-sm font-medium text-primary-700 mb-2"
+                                >Paste your short URL here</label
+                            >
+                            <div class="flex">
+                                <input
+                                    type="url"
+                                    id="short-url"
+                                    placeholder="https://sori.in/example"
+                                    class="flex-grow px-4 py-3 border border-primary-300 rounded-l-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
+                                />
+                                <button
+                                    id="expand-btn"
+                                    class="bg-primary-600 flex items-center hover:bg-primary-700 text-white px-6 py-3 rounded-r-lg font-medium transition duration-200"
+                                >
+                                    <i
+                                        class="fas fa-expand hidden md:block mr-2"
+                                    ></i>
+                                    Expand
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            id="result-container"
+                            class="hidden bg-primary-50 border border-primary-200 rounded-lg p-4"
+                        >
+                            <div class="flex justify-between items-center mb-3">
+                                <h2 class="font-medium text-primary-800">
+                                    Original URL:
+                                </h2>
+                                <button
+                                    id="copy-btn"
+                                    class="text-primary-600 hover:text-primary-800"
+                                >
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div
+                                id="original-url"
+                                class="break-all bg-white p-3 rounded border border-primary-200 text-primary-700"
+                            ></div>
+                            <div
+                                id="safety-info"
+                                class="mt-3 flex items-center text-sm"
+                            ></div>
+                        </div>
+
+                        <div id="loading" class="hidden text-center py-8">
+                            <div
+                                class="inline-block animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary-600 mb-4"
+                            ></div>
+                            <p class="text-primary-700">
+                                Expanding your URL...
+                            </p>
+                        </div>
+
+                        <div
+                            id="error"
+                            class="hidden bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-bold text-center text-primary-800 mb-12"
+                >
+                    Why Use Our URL Expander?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-primary-600 text-3xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary-800 mb-2">
+                            100% Secure
+                        </h3>
+                        <p class="text-primary-700">
+                            We don't store your URLs or track your activity.
+                            Your privacy is our priority.
+                        </p>
+                    </div>
+                    <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-primary-600 text-3xl mb-4">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary-800 mb-2">
+                            No Ads
+                        </h3>
+                        <p class="text-primary-700">
+                            Completely ad-free experience with no annoying
+                            popups or trackers.
+                        </p>
+                    </div>
+                    <div class="bg-primary-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-primary-600 text-3xl mb-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary-800 mb-2">
+                            Instant Results
+                        </h3>
+                        <p class="text-primary-700">
+                            Get the original URL in seconds without any delays.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-16 bg-primary-50">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-bold text-center text-primary-800 mb-12"
+                >
+                    How It Works
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-8 mb-8">
+                        <div
+                            class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
+                        >
+                            1
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-primary-800 mb-2"
+                            >
+                                Paste Your Short URL
+                            </h3>
+                            <p class="text-primary-700">
+                                Copy any shortened URL (bit.ly, t.co, goo.gl,
+                                etc.) and paste it into our tool.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-8 mb-8">
+                        <div
+                            class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
+                        >
+                            2
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-primary-800 mb-2"
+                            >
+                                Click "Expand"
+                            </h3>
+                            <p class="text-primary-700">
+                                Our system will safely resolve the URL without
+                                visiting the destination.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div
+                            class="flex-shrink-0 bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center text-primary-700 text-2xl font-bold"
+                        >
+                            3
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-primary-800 mb-2"
+                            >
+                                See the Original URL
+                            </h3>
+                            <p class="text-primary-700">
+                                View the full destination URL and check if it's
+                                safe before visiting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Services Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-bold text-center text-primary-800 mb-12"
+                >
+                    Supported URL Shorteners
+                </h2>
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+                >
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <a
+                            href="https://www.sorti.in"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fas text-3xl text-primary-600"
+                                ><img
+                                    src="https://www.sorti.in/favicon.ico"
+                                    alt="sorti logo"
+                            /></i>
+                            <p class="font-medium text-primary-800">sorti.in</p>
+                        </a>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i class="fab text-3xl text-primary-600 mb-2"
+                            ><img
+                                src="https://bitly.com/favicon.ico"
+                                alt="bitly logo"
+                        /></i>
+                        <p class="font-medium text-primary-800">bit.ly</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-link text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">goo.gl</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-compress text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">ow.ly</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-external-link-alt text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">tinyurl.com</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-cut text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">cutt.ly</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-share text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">rebrand.ly</p>
+                    </div>
+                    <div class="bg-primary-50 p-4 rounded-lg text-center">
+                        <i
+                            class="fas fa-ellipsis-h text-3xl text-primary-600 mb-2"
+                        ></i>
+                        <p class="font-medium text-primary-800">And more...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 bg-primary-50">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-bold text-center text-primary-800 mb-12"
+                >
+                    Frequently Asked Questions
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <details
+                        class="bg-white rounded-lg shadow-sm overflow-hidden"
+                        open
+                    >
+                        <summary
+                            class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
+                        >
+                            <span>What is a URL expander?</span>
+                            <i
+                                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
+                            ></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-primary-700">
+                            <p>
+                                A URL expander is a tool that reveals the
+                                original, full-length URL behind shortened links
+                                (like bit.ly, t.co, goo.gl, etc.). This helps
+                                you see where a link actually goes before you
+                                click on it, protecting you from potentially
+                                dangerous websites.
+                            </p>
+                        </div>
+                    </details>
+                    <details
+                        class="bg-white rounded-lg shadow-sm overflow-hidden"
+                    >
+                        <summary
+                            class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
+                        >
+                            <span>Is this service really free?</span>
+                            <i
+                                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
+                            ></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-primary-700">
+                            <p>
+                                Yes! Our URL expander is completely free to use
+                                with no hidden costs. We don't show ads or sell
+                                your data, making it one of the most
+                                privacy-focused URL expansion tools available.
+                            </p>
+                        </div>
+                    </details>
+                    <details
+                        class="bg-white rounded-lg shadow-sm overflow-hidden"
+                    >
+                        <summary
+                            class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
+                        >
+                            <span
+                                >How does this protect me from suspicious
+                                links?</span
+                            >
+                            <i
+                                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
+                            ></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-primary-700">
+                            <p>
+                                By expanding short URLs, you can see the actual
+                                destination before visiting. This helps avoid
+                                phishing sites, malware, or other dangerous web
+                                pages hidden behind shortened links. Many
+                                cybercriminals use URL shorteners to disguise
+                                malicious websites.
+                            </p>
+                        </div>
+                    </details>
+                    <details
+                        class="bg-white rounded-lg shadow-sm overflow-hidden"
+                    >
+                        <summary
+                            class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
+                        >
+                            <span>Do you store the URLs I expand?</span>
+                            <i
+                                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
+                            ></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-primary-700">
+                            <p>
+                                No. We don't store or log any of the URLs you
+                                expand. Your privacy is important to us, which
+                                is why we designed this tool to process URLs
+                                without keeping any records.
+                            </p>
+                        </div>
+                    </details>
+                    <details
+                        class="bg-white rounded-lg shadow-sm overflow-hidden"
+                    >
+                        <summary
+                            class="p-6 cursor-pointer font-medium text-primary-800 list-none flex justify-between items-center"
+                        >
+                            <span>Which URL shorteners do you support?</span>
+                            <i
+                                class="fas fa-chevron-down text-primary-600 transition-transform duration-200"
+                            ></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-primary-700">
+                            <p>
+                                We support all major URL shortening services
+                                including bit.ly, t.co (Twitter), goo.gl
+                                (Google), ow.ly, tinyurl.com, cutt.ly,
+                                rebrand.ly, and many others. If you find a
+                                shortener we don't support, please let us know!
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2
+                        class="text-3xl font-bold text-center text-primary-800 mb-12"
+                    >
+                        Our Privacy Commitment
+                    </h2>
+                    <div class="bg-primary-50 rounded-lg p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-primary-800 mb-4">
+                            We respect your privacy
+                        </h3>
+                        <p class="text-primary-700 mb-4">
+                            Unlike many other online tools, we don't track your
+                            activity or store the URLs you expand. Here's our
+                            privacy promise:
+                        </p>
+                        <ul class="space-y-3 text-primary-700">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-2"
+                                ></i>
+                                No user accounts required
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-2"
+                                ></i>
+                                No cookies or tracking
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-2"
+                                ></i>
+                                No logging of expanded URLs
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-2"
+                                ></i>
+                                No ads or third-party scripts
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-2"
+                                ></i>
+                                No data sharing with third parties
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-primary-900 text-primary-100 py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">
+                            ExpandShortURL
+                        </h3>
+                        <p class="text-primary-300">
+                            Free, secure, and privacy-focused URL expander tool
+                            to check suspicious short links.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#how-it-works"
+                                    class="text-primary-300 hover:text-white transition"
+                                    >How It Works</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#faq"
+                                    class="text-primary-300 hover:text-white transition"
+                                    >FAQ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#privacy"
+                                    class="text-primary-300 hover:text-white transition"
+                                    >Privacy</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                        <div class="flex space-x-4">
+                            <a
+                                href="https://x.com/souravdotdev"
+                                class="text-primary-300 hover:text-white transition text-xl"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                            <a
+                                href="https://github.com/dsouravcom/"
+                                class="text-primary-300 hover:text-white transition text-xl"
+                                ><i class="fab fa-github"></i
+                            ></a>
+                            <a
+                                href="mailto:sourav@dsourav.com"
+                                class="text-primary-300 hover:text-white transition text-xl"
+                                ><i class="fas fa-envelope"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-primary-800 mt-12 pt-8 text-center text-primary-400 text-sm"
+                >
+                    <p>
+                        © <span id="currentyear"></span> dsourav.com All rights
+                        reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script>
+            // Set current year in footer
+            document.getElementById("currentyear").textContent =
+                new Date().getFullYear();
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute("href")
+                    );
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
             });
-        });
+            // URL Expander Functionality
+            document
+                .getElementById("expand-btn")
+                .addEventListener("click", function () {
+                    const shortUrl = document
+                        .getElementById("short-url")
+                        .value.trim();
+                    const resultContainer =
+                        document.getElementById("result-container");
+                    const loading = document.getElementById("loading");
+                    const error = document.getElementById("error");
 
-      // Copy Functionality
-      document
-        .getElementById("copy-btn")
-        .addEventListener("click", function () {
-          const urlText = document.getElementById("original-url").textContent;
-          navigator.clipboard.writeText(urlText).then(() => {
-            const btn = document.getElementById("copy-btn");
-            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-            setTimeout(() => {
-              btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-            }, 2000);
-          });
-        });
+                    // Reset UI
+                    resultContainer.classList.add("hidden");
+                    error.classList.add("hidden");
 
-      // FAQ Accordion
-      document.querySelectorAll("details").forEach((detail) => {
-        detail.querySelector("summary").addEventListener("click", (e) => {
-          const icon = detail.querySelector("summary i");
-          if (detail.hasAttribute("open")) {
-            icon.style.transform = "rotate(0deg)";
-          } else {
-            icon.style.transform = "rotate(180deg)";
-          }
-        });
-      });
-    </script>
-  </body>
+                    if (!shortUrl) {
+                        error.textContent =
+                            "Please enter a short URL to expand";
+                        error.classList.remove("hidden");
+                        return;
+                    }
+
+                    loading.classList.remove("hidden");
+
+                    //   Fetch the expanded URL
+                    fetch(
+                        `https://backend.sourav.top/api/url`,
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                                url: shortUrl,
+                            }),
+                        }
+                    )
+                        .then((response) => response.json())
+                        .then((response) => {
+                            loading.classList.add("hidden");
+                            resultContainer.classList.remove("hidden");
+
+                            const originalUrl =
+                                response.expandedUrl || "URL not found";
+                            document.getElementById(
+                                "original-url"
+                            ).textContent = originalUrl;
+
+                            // Safety Info
+                            const safetyInfo =
+                                document.getElementById("safety-info");
+                            // check if the url start with http or https
+                            if (!originalUrl.startsWith("http")) {
+                                safetyInfo.innerHTML = `<i class="fas fa-exclamation-triangle text-red-500 mr-2"></i> Unsafe to visit`;
+                            } else {
+                                safetyInfo.innerHTML = `<i class="fas fa-shield-alt text-green-500 mr-2"></i> Safe to visit`;
+                            }
+                        })
+                        .catch((err) => {
+                            loading.classList.add("hidden");
+                            error.textContent = err.message;
+                            error.classList.remove("hidden");
+                        });
+                });
+
+            // Copy Functionality
+            document
+                .getElementById("copy-btn")
+                .addEventListener("click", function () {
+                    const urlText =
+                        document.getElementById("original-url").textContent;
+                    navigator.clipboard.writeText(urlText).then(() => {
+                        const btn = document.getElementById("copy-btn");
+                        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                        }, 2000);
+                    });
+                });
+
+            // FAQ Accordion
+            document.querySelectorAll("details").forEach((detail) => {
+                detail
+                    .querySelector("summary")
+                    .addEventListener("click", (e) => {
+                        const icon = detail.querySelector("summary i");
+                        if (detail.hasAttribute("open")) {
+                            icon.style.transform = "rotate(0deg)";
+                        } else {
+                            icon.style.transform = "rotate(180deg)";
+                        }
+                    });
+            });
+        </script>
+    </body>
 </html>
